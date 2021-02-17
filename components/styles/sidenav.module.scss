@@ -1,0 +1,40 @@
+@import "../../styles/colors.scss";
+
+.nav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border: 3px solid $border_color;
+    width: 250px;
+    height: 100%;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+
+    &_logo {
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    &_menu {
+        border-top: 3px solid $border_color;
+        a {
+            display: flex;
+            align-items: center;
+            height: 57px;
+            padding-left: 24px;
+            border-bottom: 3px solid $border_color;
+        }
+    }
+
+    &_sns {
+        display: flex;
+        align-items: center;
+        height: 57px;
+        padding-left: 24px;
+
+        a {
+            margin-right: 16px;
+        }
+    }
+}

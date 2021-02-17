@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+
+.normal {
+    // padding-top: 60px;
+    background-color: $base_color;
+}
+
+.titleBase {
+    background-color: $base_color;
+    padding: 144px 20px 0;
+
+}
+
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.leftBlk {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 620px;
+    height: 100%;
+    box-shadow: 2px 0px 6px rgba(0, 0, 0, .15);
+    background-color: white;
+}
+
+.rightBlk {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(100% - 620px);
+    height: 100%;
+    background-color: white;
+}

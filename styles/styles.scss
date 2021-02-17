@@ -1,0 +1,89 @@
+@import './colors.scss';
+@import './functions.scss';
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito+Sans:wght@200;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+
+
+html,
+body {
+  font-family: 'Source Sans Pro', noto-sans-cjk-jp, sans-serif;
+  line-height: 1.6;
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  color: $font_color;
+  // background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $font_color;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+.mw {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+
+  @include mq_max(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.6;
+
+  @include mq_max(sm) {
+    font-size: 1.84rem;
+  }
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-weight: 400;
+
+  @include mq_max(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+li {
+  list-style-type: none;
+}

@@ -1,0 +1,31 @@
+@import '../../styles/functions.scss';
+
+.work {
+    width: 30%;
+    margin: 24px 0;
+    padding: 24px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .25);
+    transition: all .25s ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: translate(-3px, -3px);
+        box-shadow: 7px 7px 13px rgba(0, 0, 0, 0.3);
+    }
+
+    @include mq_max(md) {
+        width: 48%;
+    }
+
+    &_thumb {
+        padding: 8px 0 24px;
+    }
+
+    &_title {
+        text-align: right;
+    }
+
+    &_date {
+        text-align: right;
+    }
+}
