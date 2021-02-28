@@ -2,7 +2,8 @@
 
 .normal {
     // padding-top: 60px;
-    background-color: $base_color;
+    background-color: $backgroundColor;
+    padding: 0 64px;
 }
 
 .titleBase {
@@ -14,24 +15,4 @@
 .page {
     max-width: 1280px;
     margin: 0 auto;
-}
-
-.leftBlk {
-    z-index: 10;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 620px;
-    height: 100%;
-    box-shadow: 2px 0px 6px rgba(0, 0, 0, .15);
-    background-color: white;
-}
-
-.rightBlk {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: calc(100% - 620px);
-    height: 100%;
-    background-color: white;
 }

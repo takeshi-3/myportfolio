@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+@import '../../styles/functions.scss';
+
+.closeButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 290px;
+    margin: 0 auto;
+
+    &_cross {
+        width: 30px;
+        height: 30px;
+    }
+
+    &_name {
+        font-family: mr-eaves-modern, sans-serif;
+        font-size: 3.2rem;
+        letter-spacing: 2.5rem;
+        font-weight: 200;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

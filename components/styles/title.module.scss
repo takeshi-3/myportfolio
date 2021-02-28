@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+
+.secTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 108px;
+
+    &_title {
+        padding-right: 24px;
+        font-family: mr-eaves-modern, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 3.2rem;
+        letter-spacing: 2.5rem;
+        color: $font_dark;
+    }
+
+    &_line {
+        flex-grow: 2;
+        border: 1px solid $font_dark;
+    }
+}
