@@ -101,10 +101,10 @@ const Home = ({works, gallery}) => {
                     <div className={styles.home_contact_wrapper}>
                         <div className={styles.home_contact_cont}>
                             <p className={styles.home_contact_title}>Email</p>
-                            <p>g.jem.beleeem8000(at)gmail.com</p>
+                            <p className={styles.home_contact_item}>g.jem.beleeem8000(at)gmail.com</p>
                             <p className={styles.home_contact_line}></p>
                             <p className={styles.home_contact_title}>Twitter</p>
-                            <a href="https://twitter.com/bunbun_buncho3">@bunbun_buncho3</a>
+                            <a className={styles.home_contact_item} href="https://twitter.com/bunbun_buncho3">@bunbun_buncho3</a>
                         </div>
                         <div className={styles.home_contact_thumb}>
                             <img src="images/me.jpg" />

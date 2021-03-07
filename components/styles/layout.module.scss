@@ -3,7 +3,12 @@
 .normal {
     // padding-top: 60px;
     background-color: $backgroundColor;
-    padding: 0 64px;
+    padding: 168px 64px 0;
+}
+
+.fullScreen {
+    background-color: $backgroundColor;
+    padding: 108px 0 168px;
 }
 
 .titleBase {

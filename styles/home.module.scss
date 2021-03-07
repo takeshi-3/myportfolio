@@ -69,6 +69,16 @@
         align-items: center;
     }
 
+    &_title {
+        color: $font_light;
+    }
+
+    &_line {
+        width: 120px;
+        margin: 40px 0;
+        border-bottom: 1px solid $font-light;
+    }
+
     &_cont {
 
     }

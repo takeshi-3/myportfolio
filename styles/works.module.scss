@@ -1,0 +1,40 @@
+@import './colors.scss';
+
+.thumbnail {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.info {
+    width: 75%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 108px 40px 0;
+
+    &_title {
+        padding-bottom: 16px;
+        font-size: 1.8rem;
+        font-weight: normal;
+        color: $font_dark;
+    }
+
+    &_skill {
+        padding-bottom: 64px;
+        span {
+            font-size: 1.8rem;
+            color: $font_light;
+        }
+
+        &_line {
+            padding: 0 12px;
+        }
+    }
+
+    &_description {
+        line-height: 40px;
+    }
+}
+
+.close {
+    padding: 168px 0 64px;
+}

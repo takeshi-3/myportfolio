@@ -5,10 +5,10 @@ import styles from './styles/layout.module.scss';
 
 import { motion } from 'framer-motion';
 
-export const Layout = ({children, title}) => {
+export const Layout = ({children, title, hasPadding=true}) => {
     return (
         <motion.div 
-            className={styles.normal}
+            className={hasPadding ? styles.normal : styles.fullScreen}
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
