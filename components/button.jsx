@@ -12,3 +12,11 @@ export const CloseButton = ({}) => {
         </a></Link>
     )
 };
+
+export const LinkButton = ({url}) => {
+    return (
+        <a href={url} className={styles.linkButton} target="_blank">
+            Visit Website
+        </a>
+    );
+}

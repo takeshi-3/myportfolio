@@ -1,9 +1,14 @@
 @import '../../styles/colors.scss';
+@import '../../styles/functions.scss';
 
 .normal {
     // padding-top: 60px;
     background-color: $backgroundColor;
     padding: 168px 64px 0;
+
+    @include mq_max(md) {
+        padding: 0px 0px 0px;
+    }
 }
 
 .fullScreen {

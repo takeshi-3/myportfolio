@@ -24,7 +24,7 @@ const client = require('contentful').createClient({
 });
 
 export const getServerSideProps = async () => {
-    const works = await client.getEntries({content_type: 'works'});
+    const works = await client.getEntries({content_type: 'works', order: '-fields.date'});
     const gallery = await client.getEntries({content_type: 'gallery'});
     return {
         props: {

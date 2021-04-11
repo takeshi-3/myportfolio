@@ -10,11 +10,15 @@ const WorkItem = ({fields, id, animProps, onClick}) => {
             <Link href={`/works/${id}`}><a>
                 <div className={styles.work_thumb} style={{backgroundImage: `url(${fields.thumbnail.fields.file.url})`}}></div>
             </a></Link>
-            <h3 className={styles.work_title}>{fields.title}</h3>
-            <p className={styles.work_skills}>
-            {fields.skills.map(skill => 
-                <span className={styles.work_skill}>{skill}<span>|</span></span>
-            )}</p>
+            <div className={styles.work_cont}>
+                <h3 className={styles.work_title}>{fields.title}</h3>
+                {fields.category !== undefined ? 
+                    <p className={styles.work_skills}>
+                    {fields.category.map(cat => 
+                        <span className={styles.work_skill}>{cat}<span>/</span></span>
+                    )}</p>
+                : null}
+            </div>
         </animated.div>
     );
 };

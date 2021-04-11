@@ -24,3 +24,22 @@
         cursor: pointer;
     }
 }
+
+.linkButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 180px;
+    height: 55px;
+    border: 2px solid $font-dark;
+    color: $font-dark;
+    transition: all .25s ease;
+    font-family: mr-eaves-modern, sans-serif;
+    font-size: 20px;
+
+    &:hover {
+        color: white;
+        background-color: $font-dark;
+    }
+}

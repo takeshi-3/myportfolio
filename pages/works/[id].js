@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 // custom components
 import {Layout} from '../../components/layout';
-import {CloseButton} from '../../components/button';
+import {CloseButton, LinkButton} from '../../components/button';
 
 // styles
 import styles from '../../styles/works.module.scss';
@@ -68,23 +68,38 @@ const SingleWork = ({work}) => {
 
             <section className={styles.info}>
                 <h1 className={styles.info_title}>{theWork.fields.title}</h1>
-                <p className={styles.info_skill}>
-                {theWork.fields.skills.map(skill => 
-                    <span>{skill}<span className={styles.info_skill_line}>|</span></span>
-                )}
-                </p>
+
+                {theWork.fields.category !== undefined ?
+                    <p className={styles.info_tags}>
+                        Role<br />
+                        {theWork.fields.category.map(cat => 
+                            <span>{cat}<span className={styles.info_line}>/</span></span>
+                        )}
+                    </p>
+                :null}
+
+                {theWork.fields.skills !== undefined ?
+                    <p className={`${styles.info_tags} ${styles.info_skills}`}>
+                        Skill<br />
+                        {theWork.fields.skills.map(skill => 
+                            <span>{skill}<span className={styles.info_line}>/</span></span>
+                        )}
+                    </p>
+                :null}
 
                 <p className={styles.info_description}>
                     {theWork.fields.description}
                 </p>
+
+                {theWork.fields.url !== undefined ? 
+                    <div>
+                        <LinkButton url={theWork.fields.url} />
+                    </div> 
+                : null}
             </section>
 
             <section className={styles.body}>
 
-            </section>
-
-            <section className={styles.close}>
-                <CloseButton />
             </section>
         </Layout>
     )

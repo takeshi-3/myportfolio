@@ -1,3 +1,5 @@
+@import "../../styles/functions.scss";
+
 .nav {
     position: fixed;
     top: 0;
@@ -10,22 +12,34 @@
         justify-content: space-between;
         align-items: center;
         padding: 40px 64px;
+
+        @include mq_max(md) {
+            padding: 24px;
+        }
     }
 
     &_title {
         h1 {
             font-size: 2.4rem;
             font-weight: normal;
+
+            @include mq_max(md) {
+                font-size: 1.8rem;
+            }
         }
     }
 
     &_menu {
         display: flex;
         justify-content: space-between;
-        width: 270px;
+        width: 150px;
+
+        @include mq_max(md) {
+            width: 120px;
+        }
         
         a {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
         }
     }
 }

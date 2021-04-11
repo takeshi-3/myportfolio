@@ -1,37 +1,75 @@
 @import './colors.scss';
+@import './functions.scss';
 
 .thumbnail {
     width: 80%;
     margin: 0 auto;
+
+    @include mq_max(md) {
+        width: 100%;
+        margin: -36px auto 0;
+    }
 }
 
 .info {
     width: 75%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto 0;
     padding: 108px 40px 0;
 
+    @include mq_max(md) {
+        width: 100%;
+        padding: 40px 24px 0;
+    }
+
     &_title {
-        padding-bottom: 16px;
         font-size: 1.8rem;
         font-weight: normal;
         color: $font_dark;
+        text-align: center;
+        line-height: 1.6;
+
+        @include mq_max(md) {
+            text-align: left;
+        }
     }
 
-    &_skill {
-        padding-bottom: 64px;
+    &_line {
+        padding: 0 12px;
+    }
+
+    &_tags {
+        padding-top: 40px;
+        text-align: center;
+        color: $font-light;
         span {
-            font-size: 1.8rem;
-            color: $font_light;
+            font-size: 1.6rem;
+
+            &:last-child span {
+                display: none;
+            }
         }
 
-        &_line {
-            padding: 0 12px;
+        @include mq_max(md) {
+            padding-top: 24px;
+            text-align: left;
         }
+    }
+
+    &_skills {
+        // padding-top: 40px;
     }
 
     &_description {
-        line-height: 40px;
+        margin: 0 auto;
+        max-width: 830px;
+        padding: 64px 0;
+        line-height: 2.3;
+        font-size: 1.6rem;
+
+        @include mq_max(md) {
+            font-size: 1.4rem;
+        }
     }
 }
 

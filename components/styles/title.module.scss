@@ -1,4 +1,5 @@
 @import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
 
 .secTitle {
     display: flex;
@@ -6,6 +7,12 @@
     align-items: center;
     width: 50%;
     padding-bottom: 108px;
+
+    @include mq_max(md) {
+        width: 100%;
+        padding-bottom: 40px;
+        justify-content: space-around;
+    }
 
     &_title {
         padding-right: 24px;
@@ -15,10 +22,20 @@
         font-size: 3.2rem;
         letter-spacing: 2.5rem;
         color: $font_dark;
+
+        @include mq_max(md) {
+            padding-right: 0px;
+            font-size: 2.8rem;
+            letter-spacing: 1.8rem;
+        }
     }
 
     &_line {
         flex-grow: 2;
         border: 1px solid $font_dark;
+
+        @include mq_max(md) {
+            display: none;
+        }
     }
 }

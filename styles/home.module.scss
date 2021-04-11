@@ -4,16 +4,42 @@
 .home {
     width: 90%;
     margin: 0 auto;
+
+    @include mq_max(md) {
+        width: 100%;
+        padding: 0px 40px;
+    }
+
+    @include mq_max(sm) {
+        padding: 0px;
+    }
 }
 
 .home_profile {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 168px;
+
+    @include mq_max(md) {
+        flex-direction: column-reverse;
+        padding-bottom: 108px;
+    }
 
     &_name {
         display: flex;
+        justify-content: start;
         align-items: center;
+
+        @include mq_max(md) {
+            width: 100%;
+            justify-content: space-around;
+            padding-top: 24px;
+
+            p {
+                text-align: center;
+            }
+        }
 
         p {
             font-size: 1.8rem;
@@ -22,16 +48,28 @@
         p:nth-child(2) {
             padding-top: 16px;
             color: $font_light;
+
+            @include mq_max(md) {
+                padding-top: 8px;
+            }
         }
     }
 
     &_keyart {
         width: 62.5%;
+
+        @include mq_max(md) {
+            width: 100%;
+        }
     }
 }
 
 .home_works {
     padding-bottom: 242px;
+
+    @include mq_max(md) {
+        padding-bottom: 108px;
+    }
 
     &_cont {
         display: flex;
@@ -63,10 +101,15 @@
     width: 100%;
     padding-bottom: 242px;
 
+    @include mq_max(md) {
+        padding: 0px 16px 168px;
+    }
+
     &_wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &_title {
@@ -77,6 +120,10 @@
         width: 120px;
         margin: 40px 0;
         border-bottom: 1px solid $font-light;
+
+        @include mq_max(md) {
+            margin: 24px 0;
+        }
     }
 
     &_cont {
@@ -85,5 +132,10 @@
 
     &_thumb {
         width: 30%;
+
+        @include mq_max(md) {
+            padding-top: 24px;
+            width: 100%;
+        }
     }
 }

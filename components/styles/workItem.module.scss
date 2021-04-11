@@ -9,6 +9,11 @@
         width: 48%;
     }
 
+    @include mq_max(md) {
+        width: 100%;
+        margin-bottom: 64px;
+    }
+
     &:nth-child(2n) {
         // padding-top: 108px;
     }
@@ -37,8 +42,14 @@
         }
     }
 
+    &_cont {
+         @include mq_max(md) {
+             padding: 8px 16px;
+         }
+    }
+
     &_title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     &_date {

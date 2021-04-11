@@ -16,10 +16,9 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 // custom components
 
 // OGP static info
-const description = "デザインエンジニアChunのポートフォリオ";
+const description = "Takeshi Funatsu(Chun) | Portfolio";
 
 const Header = ({title}) => {
-    const menuItems = ["Profile", "Works", "Contact"];
 
     useEffect(() => {
         // adobe font
@@ -42,12 +41,12 @@ const Header = ({title}) => {
                 <link rel="shortcut icon" href="/images/favicon.ico"></link>
 
                 {/* ----- OGP ----- */}
-                <meta property="og:title" content={`Chun(Takeshi Funatsu) – Design Engineer`} />
+                <meta property="og:title" content={`Takeshi Funatsu(Chun) | Portfolio`} />
                 <meta property="og:description" content={description} />
                 <meta property="og:type" content="website" />
                 {/* <meta property="og:url" content={`https://offlabel.tokyo/${title.toLowerCase()}`} /> */}
                 {/* <meta property="og:image" content="https://offlabel.tokyo/images/ogp.jpg" /> */}
-                <meta property="og:site_name" content="Chun(Takeshi Funatsu) – Design Engineer" />
+                <meta property="og:site_name" content="Takeshi Funatsu(Chun) | Portfolio" />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:site" content="@bunbun_buncho3" />
             </Head>

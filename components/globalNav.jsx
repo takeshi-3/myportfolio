@@ -5,7 +5,6 @@ import Link from 'next/link';
 const GlobalNav = () => {
     const navMenus = [
         {name: 'Works', link: 'works'},
-        {name: 'Gallery', link: 'gallery'},
         {name: 'Contact', link: 'contact'},
     ];
 
