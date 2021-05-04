@@ -8,3 +8,12 @@ export const SectionTitle = ({title}) => {
         </div>
     )
 };
+
+export const ProcessTitle = ({children}) => {
+    return (
+        <h2 className={styles.processTitle}>
+            <img src="../images/processIcon.svg" />
+            <p className={styles.processTitle_p}>{children}</p>
+        </h2>
+    )
+}

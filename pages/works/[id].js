@@ -7,6 +7,7 @@ import Link from 'next/link';
 // custom components
 import {Layout} from '../../components/layout';
 import {CloseButton, LinkButton} from '../../components/button';
+import {ProcessTitle} from '../../components/title';
 
 // styles
 import styles from '../../styles/works.module.scss';
@@ -17,13 +18,20 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import { Close } from '@material-ui/icons';
 // import { RoundButton } from '../../components/buttons';
 
-// const documentOption = {
-//     renderNode: {
-//         // [BLOCKS.HEADING_1]: (node, children) => <BlogSecTitle>{children}</BlogSecTitle>,
-//         // [BLOCKS.QUOTE]: (node, children) => <BlogKeySentence>{children}</BlogKeySentence>,
-//         // [BLOCKS.EMBEDDED_ASSET]: (node) => <img src={node.data.target.fields.file.url} />
-//     }
-// };
+
+/* ---------------------------------------------------------------------------------------------------------------------------
+    Doc : https://www.contentful.com/developers/docs/javascript/tutorials/rendering-contentful-rich-text-with-javascript/
+--------------------------------------------------------------------------------------------------------------------------- */
+const documentOption = {
+    renderNode: {
+        // [BLOCKS.PARAGRAPH]: (node, children) => <section className={styles.body_sec}>{children}</section>,
+        [BLOCKS.HEADING_1]: (node, children) => <ProcessTitle>{children}</ProcessTitle>,
+        [BLOCKS.EMBEDDED_ASSET]: (node) => <div className={styles.body_imgWrapper}><img src={node.data.target.fields.file.url} /></div>,
+    },
+    renderMark: {
+        [MARKS.BOLD]: text => <span className={styles.body_bold}>{text}</span>
+    }
+};
 
 // fetch data from contentful
 const client = require('contentful').createClient({
@@ -99,7 +107,26 @@ const SingleWork = ({work}) => {
             </section>
 
             <section className={styles.body}>
+                {documentToReactComponents(theWork.fields.body, documentOption)}
+                {/* <h1 className={styles.body_title}>Concept</h1>
+                <div className={styles.body_imgWrapper}>
+                    <img src="images/keyArt.png" />
+                </div>
+                <p>
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                </p>
 
+                <h1 className={styles.body_title}>Concept</h1>
+                <div className={styles.body_imgWrapper}>
+                    <img src="images/keyArt.png" />
+                </div>
+                <p>
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                    ここに説明のテキストが入ります。ここに説明のテキストが入ります。ここに説明のテキストが入ります。
+                </p> */}
             </section>
         </Layout>
     )

@@ -16,9 +16,9 @@
 
     &_title {
         padding-right: 24px;
-        font-family: mr-eaves-modern, sans-serif;
-        font-weight: 200;
+        font-family: mr-eaves-sans, sans-serif;
         font-style: normal;
+        font-weight: 200;
         font-size: 3.2rem;
         letter-spacing: 2.5rem;
         color: $font_dark;
@@ -36,6 +36,35 @@
 
         @include mq_max(md) {
             display: none;
+        }
+    }
+}
+
+.processTitle {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 108px 0 40px;
+
+    @include mq_max(md) {
+        padding: 64px 0 24px;
+    }
+    
+    img {
+        width: 41px;
+        height: auto;
+    }
+
+    &_p {
+        width: 100%;
+        padding: 0 0 0 16px!important;
+        font-size: 2.3rem!important;
+        color: $font-dark!important;
+        font-weight: normal!important;
+
+        @include mq_max(md) {
+            font-size: 1.8rem!important;
         }
     }
 }
