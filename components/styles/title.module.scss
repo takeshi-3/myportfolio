@@ -48,7 +48,7 @@
     padding: 108px 0 40px;
 
     @include mq_max(md) {
-        padding: 64px 0 24px;
+        padding: 40px 24px 24px;
     }
     
     img {
