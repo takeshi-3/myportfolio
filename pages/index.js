@@ -63,8 +63,12 @@ const Home = ({works, gallery}) => {
                 <section className={styles.home_profile}>
                     <div className={styles.home_profile_name}>
                         <div>
-                            <p>Takeshi Funatsu (Chun)</p>
-                            <p>Designer | Engineer</p>
+                            <p className={styles.home_profile_name_me}>Takeshi Funatsu</p>
+                            <p>SKILLS</p>
+                            <p>UIUX Design</p>
+                            <p>WEB Design</p>
+                            <p>Graphic Design</p>
+                            <p>Frontend Development (React.js, Three.js)</p>
                         </div>
                     </div>
 
