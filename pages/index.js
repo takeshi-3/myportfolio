@@ -73,7 +73,7 @@ const Home = ({works, gallery}) => {
                     </div>
 
                     <div className={styles.home_profile_keyart}>
-                        <img src="images/keyArt.png" />
+                        <img src="images/keyArt.jpg" />
                     </div>
                 </section>
 
