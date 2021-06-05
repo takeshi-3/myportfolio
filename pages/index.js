@@ -35,16 +35,15 @@ export const getServerSideProps = async () => {
     }
 };
 
+const metaInfo = {
+    title: "デザイナーのfunachunです。 | funachun.me",
+    description: "デザイナーfunachunのポートフォリオサイトです。WEBデザイン、ブランディング、UIUXデザインから開発までお任せください。",
+    image: "/images/ogp.jpg",
+    type: "website",
+    url: "https://funachun.me"
+};
+
 const Home = ({ works, gallery }) => {
-    const metaInfo = {
-        title: "デザイナーのfunachunです。 | funachun.me",
-        description: "デザイナーfunachunのポートフォリオサイトです。WEBデザイン、ブランディング、UIUXデザインから開発までお任せください。",
-        image: "/images/ogp.jpg",
-        type: "website",
-        url: "https://funachun.me"
-    };
-
-
     const worksRef = useRef(null);
     const galleryRef = useRef(null);
     const contactRef = useRef(null);
