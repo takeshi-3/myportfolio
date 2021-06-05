@@ -4,66 +4,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 .home {
-    width: 90%;
-    margin: 0 auto;
-
-    @include mq_max(md) {
-        width: 100%;
-        padding: 0px 40px;
-    }
-
-    @include mq_max(sm) {
-        padding: 0px;
-    }
+    width: 100%;
 }
 
 .home_profile {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 168px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+    padding: 0 64px;
+    margin-bottom: 168px;
+    background-image: url("/images/keyArt.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include mq_max(md) {
-        flex-direction: column-reverse;
-        padding-bottom: 108px;
+        padding: 0 24px;
+        margin-bottom: 64px;
     }
 
-    &_name {
-        display: flex;
-        justify-content: start;
-        align-items: center;
+    &_me {
+        font-size: 3.8rem!important;
+        font-family: mr-eaves-modern, sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        letter-spacing: .5rem;
+
+        span {
+            letter-spacing: .2rem;
+            font-size: 2rem;
+        }
 
         @include mq_max(md) {
-            width: 100%;
-            justify-content: space-around;
-            padding-top: 24px;
+            font-size: 2.8rem!important;
+            letter-spacing: .5rem;
+        }
+    }
 
-            p {
-                text-align: center;
+    &_desc {
+        padding-top: 64px;
+        font-size: 1.4rem;
+        font-family: kinuta-maruminshinano-stdn, serif;
+        font-weight: 400;
+        line-height: 2.4;
+
+        @include mq_max(md) {
+            font-size: 1.4rem;
+        }
+        
+        @include mq_max(sm) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &_skill {
+        @include mq_max(sm) {
+            text-align: center;
+        }
+
+        h2 {
+            font-family: mr-eaves-modern, sans-serif;
+            padding-top: 40px;
+            color: $font-light;
+            font-weight: 200;
+            font-style: italic;
+            font-size: 2.3rem;
+
+            @include mq_max(md) {
+                font-size: 1.8rem;
             }
         }
 
         p {
-            font-size: 1.8rem;
-        }
-
-        &_me {
-            font-size: 2.8rem!important;
-            font-family: 'Poiret One', cursive;
-            letter-spacing: .8rem;
+            font-family: mr-eaves-modern, sans-serif;
+            font-size: 2.1rem;
+            font-style: italic;
+            font-weight: 200;
 
             @include mq_max(md) {
-                font-size: 2.3rem!important;
-                letter-spacing: .5rem;
-            }
-        }
-
-        p:nth-child(2) {
-            padding-top: 16px;
-            color: $font_light;
-
-            @include mq_max(md) {
-                padding-top: 16px;
+                font-size: 1.6rem;
             }
         }
     }
@@ -78,10 +99,12 @@
 }
 
 .home_works {
-    padding-bottom: 242px;
+    padding: 0 40px 242px;
+    max-width: 1280px;
+    margin: 0 auto;
 
     @include mq_max(md) {
-        padding-bottom: 108px;
+        padding: 0 0px 108px;
     }
 
     &_cont {
@@ -92,7 +115,7 @@
 }
 
 .home_gallery {
-    padding-bottom: 242px;
+    margin: 0 auto;
     &_cont {
         display: flex;
         justify-content: space-between;
@@ -112,7 +135,9 @@
 
 .home_contact {
     width: 100%;
-    padding-bottom: 242px;
+    padding: 0 40px 242px;
+    max-width: 1280px;
+    margin: 0 auto;
 
     @include mq_max(md) {
         padding: 0px 16px 168px;

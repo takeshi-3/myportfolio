@@ -4,7 +4,7 @@
 .normal {
     // padding-top: 60px;
     background-color: $backgroundColor;
-    padding: 168px 64px 0;
+    // padding: 168px 0 0;
 
     @include mq_max(md) {
         padding: 0px 0px 0px;

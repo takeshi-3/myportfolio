@@ -6,7 +6,7 @@ export const CloseButton = ({}) => {
     return (
         <Link href='/'><a>
             <div className={styles.closeButton}>
-                <div className={styles.closeButton_cross}><img src="/images/cross.svg" /></div>
+                <div className={styles.closeButton_cross}><img src="/images/cross.svg" alt="閉じるボタン" /></div>
                 <p className={styles.closeButton_name}>CLOSE</p>
             </div>
         </a></Link>

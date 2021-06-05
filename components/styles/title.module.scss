@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    padding-bottom: 108px;
+    padding-bottom: 64px;
 
     @include mq_max(md) {
         width: 100%;
@@ -16,7 +16,7 @@
 
     &_title {
         padding-right: 24px;
-        font-family: mr-eaves-sans, sans-serif;
+        font-family: mr-eaves-modern, sans-serif;
         font-style: normal;
         font-weight: 200;
         font-size: 3.2rem;
@@ -32,7 +32,7 @@
 
     &_line {
         flex-grow: 2;
-        border: 1px solid $font_dark;
+        border: 1px solid $font_light;
 
         @include mq_max(md) {
             display: none;

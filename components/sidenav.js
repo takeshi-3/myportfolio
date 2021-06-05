@@ -10,19 +10,19 @@ const SideNav = () => {
     return (
         <main className={styles.nav}>
             <section className={styles.nav_logo}>
-                <img src="/images/logo.jpg" />
+                <h2><img src="/images/logo.jpg" alt="funachunのロゴ" /></h2>
             </section>
 
-            <section className={styles.nav_menu}>
+            <ul className={styles.nav_menu}>
                 {menuItems.map(item => 
-                    <a href={`#${item.toLowerCase()}`}>{item}</a>
+                    <li><a href={`#${item.toLowerCase()}`}>{item}</a></li>
                 )}
-            </section>
+            </ul>
 
-            <section className={styles.nav_sns}>
+            <div className={styles.nav_sns}>
                 <a href=""><TwitterIcon fontSize="large" /></a>
                 <a href=""><GitHubIcon fontSize="large" /></a>
-            </section>
+            </div>
         </main>
     )
 };

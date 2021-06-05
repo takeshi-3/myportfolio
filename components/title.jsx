@@ -12,7 +12,7 @@ export const SectionTitle = ({title}) => {
 export const ProcessTitle = ({children}) => {
     return (
         <h2 className={styles.processTitle}>
-            <img src="../images/processIcon.svg" />
+            <img src="../images/processIcon.svg" alt="セクションタイトルのアイコン" />
             <p className={styles.processTitle_p}>{children}</p>
         </h2>
     )

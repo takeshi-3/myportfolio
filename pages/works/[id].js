@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react';
 import Link from 'next/link';
 
 // custom components
+import Header from '../../components/header.js';
 import {Layout} from '../../components/layout';
 import {CloseButton, LinkButton} from '../../components/button';
 import {ProcessTitle} from '../../components/title';
@@ -26,7 +27,7 @@ const documentOption = {
     renderNode: {
         // [BLOCKS.PARAGRAPH]: (node, children) => <section className={styles.body_sec}>{children}</section>,
         [BLOCKS.HEADING_1]: (node, children) => <ProcessTitle>{children}</ProcessTitle>,
-        [BLOCKS.EMBEDDED_ASSET]: (node) => <div className={styles.body_imgWrapper}><img src={node.data.target.fields.file.url} /></div>,
+        [BLOCKS.EMBEDDED_ASSET]: (node) => <div className={styles.body_imgWrapper}><img src={node.data.target.fields.file.url} alt="デザイン工程のイメージ画像" /></div>,
     },
     renderMark: {
         [MARKS.BOLD]: text => <span className={styles.body_bold}>{text}</span>
@@ -67,12 +68,22 @@ export const getStaticProps = async ({params}) => {
 
 const SingleWork = ({work}) => {
     const theWork = work.items[0];
+
+    const metaInfo = {
+        title: `Work – ${theWork.fields.title} | funachun.me`,
+        description: "デザイナーfunachunのポートフォリオサイトです。WEBデザイン、ブランディング、UIUXデザインから開発までお任せください。",
+        image: theWork.fields.thumbnail.fields.file.url,
+        type: "article",
+        url: `https://funachun.me/works/${theWork.sys.id}`
+    };
+
     useEffect(() => {
         console.log(work);
     }, []);
     return (
-        <Layout title="Work" hasPadding={false}>
-            <div className={styles.thumbnail}><img src={theWork.fields.thumbnail.fields.file.url} /></div>
+        <Layout hasPadding={false}>
+            <Header title={metaInfo.title} description={metaInfo.description} image={metaInfo.image} type={metaInfo.type} url={metaInfo.url} />
+            <div className={styles.thumbnail}><img src={theWork.fields.thumbnail.fields.file.url} alt="案件紹介のサムネイル" /></div>
 
             <section className={styles.info}>
                 <h1 className={styles.info_title}>{theWork.fields.title}</h1>

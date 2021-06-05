@@ -1,11 +1,10 @@
-import Header from './header.js';
-import GlobalNav from '../components/globalNav';
-
 import styles from './styles/layout.module.scss';
+
+import GlobalNav from '../components/globalNav';
 
 import { motion } from 'framer-motion';
 
-export const Layout = ({children, title, hasPadding=true}) => {
+export const Layout = ({children, hasPadding=true}) => {
     return (
         <motion.div 
             className={hasPadding ? styles.normal : styles.fullScreen}
@@ -13,9 +12,8 @@ export const Layout = ({children, title, hasPadding=true}) => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
             >
-            <Header title={title} />
-            <GlobalNav />
             {children}
+            <GlobalNav />
         </motion.div>
     )
 };
