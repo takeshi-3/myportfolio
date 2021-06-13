@@ -154,6 +154,16 @@
         color: $font_light;
     }
 
+    &_item {
+        line-height: 2.1;
+    }
+
+    &_desc {
+        // padding-top: 16px;
+        font-size: 1.5rem;
+        line-height: 2.2;
+    }
+
     &_line {
         width: 120px;
         margin: 40px 0;
