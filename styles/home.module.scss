@@ -175,7 +175,11 @@
     }
 
     &_cont {
-
+        width: 60%;
+        
+        @include mq_max(md) {
+            width: 100%;
+        }
     }
 
     &_thumb {
